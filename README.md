@@ -1,27 +1,75 @@
-# CareersAngularDashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+# Careers Angular 
 
-## Development server
+This is the **Careers Angular**, an admin interface built with Angular and Angular Material. It provides a responsive and modern UI for managing career-related data.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📦 Tech Stack
 
-## Code scaffolding
+- Angular v18
+- Angular Material
+- Bootstrap 5
+- Font Awesome
+- SweetAlert2
+- RxJS
+- ngx-cookie-service
+- ngx-pagination
+- ngx-sharebuttons
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Getting Started
 
-## Build
+### Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js (v16 or higher recommended)
+- Angular CLI
 
-## Running unit tests
+### Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/MadonnaAdel/CareersFrontend-Angular.git
+cd careers-angular
+npm install
+```
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Build
+
+To build the project for production:
+
+```bash
+npm run build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+## 🧪 Running Unit Tests
+
+To execute the unit tests via [Karma](https://karma-runner.github.io):
+
+```bash
+npm test
+```
+
+## 📁 Project Structure
+
+- `src/app/` – Core application modules and components
+- `src/assets/` – Static assets (images, styles, etc.)
+- `src/environments/` – Environment-specific settings
+
+## 🛠️ Features
+
+- Responsive and modern dashboard layout
+- User-friendly data tables with pagination
+- Sweet alert modals for actions
+- Social sharing integration
+- Cookie and session management
+
+## 📬 Contact
+
+For support, reach out via [your email or GitHub link].
+
+---
+
+> Built with ❤️ using Angular
