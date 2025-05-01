@@ -1,163 +1,192 @@
 <div class="heroSection">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-column headerContainer mt-5">
-                <div class="headerText">
-                    <h1>
-                        The <span class="highlight">#1</span> Job Board for
-                        <br />
-                        Hiring or Find your next
-                        <br />
-                        job in <span class="highlight">Egypt</span>
-                    </h1>
-                    <p class="mt-4">
-                        Each month, over 3 million job seekers rely on our website as a trusted resource in their quest for employment. These individuals come from diverse backgrounds and industries, all united by their common goal of finding meaningful work.
-                    </p>
-                </div>
-                <div>
-                    <div class="searchBar">
-                        <div class="d-flex">
-                            <div>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <i class="bi bi-briefcase-fill" style="font-size: 16px; color: #989DA6;"></i>
-                                    <p class="m-0 searchPara">Industry</p>
-                                </div>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <i class="bi bi-geo-alt-fill" style="font-size: 17px; color: #989DA6;"></i>
-                                <p class="m-0 searchPara">Location</p>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="searchButton m-0">
-                                <i class="bi bi-search" style="font-size: 16px; color: #FFFFFF;"></i>
-                                <p class="m-0 search">Search</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="containerImage mt-1">
-                <img class="w-100" src="/herosection.jpg" alt="Job Search" />
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-md-4 mb-3" *ngFor="let item of jobSeekerStats; let i = index">
-                <div class="card myShadow text-center">
-                    <div class="card-body">
-                        <div class="card-title">{{ item.value }}</div>
-                        <div class="card-text m-1 p-0">{{ item.title }}</div>
-                        <div class="cardBody m-2 p-0">{{ item.description }}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container text-center">
-    <h2 class="header">Popular Job Categories</h2>
-    <p class="paragraph">
-      2024 jobs live - 293 added today
-      <br />
-      Explore the marketplace.
-    </p>
-    <div class="categories">
-      
-      <div *ngFor="let category of categories" class="categoryCard" [ngClass]="{'highlight': category.highlight}">
-        <div class="categoryIcon">
-                    <img src="{{ category.icon }}" alt="{{ category.name }}" style="font-size: 10px; color: #28a745;" />
-
-          <!-- <i [ngClass]="'bi ' + category.icon" style="font-size: 40px; color: #28a745;"></i> -->
-        </div>
-        <div class="categoryInfo">
-          <div class="categoryName">{{ category.name }}</div>
-          <div class="categoryJobs">10k+ Jobs</div>
-        </div>
-      </div>
-    </div>
-    <button class="btn btn-success allCategoriesButton">All Categories</button>
-  </div>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 imageCol">
-        <img src="/work.jpg" alt="Job Search" class="image" />
-      </div>
-      <div class="col-md-6 d-flex flex-column justify-content-center">
-        <h1 class="header">Millions of Jobs. Find the one that suits you.</h1>
-        <p class="description">
-          Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 600,000 companies worldwide.
-        </p>
-        <ul class="features">
-          <li><i class="bi bi-check-circle checkIcon"></i> Bring to the table win-win survival</li>
-          <li><i class="bi bi-check-circle checkIcon"></i> Capitalize on low hanging fruit to identify</li>
-          <li><i class="bi bi-check-circle checkIcon"></i> But I must explain to you how all this</li>
-        </ul>
-        <button class="btn button ">Get Started</button>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="glassy" [dir]="isRtl ? 'rtl' : 'ltr'">
-    <div class="container">
-      <div class="row mt-4">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h2 class="mainTitle">How it works?</h2>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex flex-column headerContainer mt-5">
+        <div class="headerText">
+          <h1>
+            The <span class="highlight">#1</span> Job Board for
+            <br />
+            Hiring or Find your next
+            <br />
+            job in <span class="highlight">Egypt</span>
+          </h1>
+          <p class="mt-4">
+            Each month, over 3 million job seekers rely on our website as a
+            trusted resource in their quest for employment. These individuals
+            come from diverse backgrounds and industries, all united by their
+            common goal of finding meaningful work.
+          </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
-          <img src="/acc.svg" alt="icons" />
-          <h6 class="subTitle">Create Account</h6>
-          <p class="paragraph">It’s very easy to open an account and start your journey.</p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
-          <img src="/ediF.svg" alt="icons" />
-          <h6 class="subTitle">Complete your profile</h6>
-          <p class="paragraph">Complete your profile with all the info to get attention of client.</p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
-          <img src="/Edit.svg" alt="icons" />
-          <h6 class="subTitle">Apply job or hire</h6>
-          <p class="paragraph">Apply & get your preferable jobs with all the requirements and get it.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-4 col-sm-12">
-        <div class="parent">
-          <p class="par">Why choose us?</p>
-          <h2>World of talent at your fingertips</h2>
-          <div class="accordion">
-            <div class="accordion-item" *ngFor="let item of accordionItems">
-              <div class="accordion-header" (click)="toggleAccordion(item)">
-                {{ item.title }}
-                <span *ngIf="isActive[item.title]">&#9650;</span>
-                <span *ngIf="!isActive[item.title]">&#9660;</span>
+        <div>
+          <div class="searchBar">
+            <div class="d-flex">
+              <div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <i
+                    class="bi bi-briefcase-fill"
+                    style="font-size: 16px; color: #989da6"
+                  ></i>
+                  <p class="m-0 searchPara">Industry</p>
+                </div>
               </div>
-              <div *ngIf="isActive[item.title]" class="accordion-content">
-                <p>{{ item.content }}</p>
+              <div class="divider"></div>
+              <div class="d-flex justify-content-center align-items-center">
+                <i
+                  class="bi bi-geo-alt-fill"
+                  style="font-size: 17px; color: #989da6"
+                ></i>
+                <p class="m-0 searchPara">Location</p>
               </div>
+            </div>
+            <div>
+              <button class="searchButton m-0">
+                <i
+                  class="bi bi-search"
+                  style="font-size: 16px; color: #ffffff"
+                ></i>
+                <p class="m-0 search">Search</p>
+              </button>
             </div>
           </div>
-          <button class="btn1">Learn More</button>
         </div>
       </div>
-      <div class="col-lg-6 col-md-4 col-sm-12">
-        <div class="photos">
-          <img src="/ff.jpg" alt="photo" class="photo" />
+      <div class="containerImage mt-1">
+        <img class="w-100" src="/herosection.jpg" alt="Job Search" />
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div
+        class="col-md-4 mb-3"
+        *ngFor="let item of jobSeekerStats; let i = index"
+      >
+        <div class="card myShadow text-center">
+          <div class="card-body">
+            <div class="card-title">{{ item.value }}</div>
+            <div class="card-text m-1 p-0">{{ item.title }}</div>
+            <div class="cardBody m-2 p-0">{{ item.description }}</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
- 
-  
-  
-  
-  
+</div>
+<div class="container text-center">
+  <h2 class="header">Popular Job Categories</h2>
+  <p class="paragraph">
+    2024 jobs live - 293 added today
+    <br />
+    Explore the marketplace.
+  </p>
+  <div class="categories">
+    <div
+      *ngFor="let category of categories"
+      class="categoryCard"
+      [ngClass]="{ highlight: category.highlight }"
+    >
+      <div class="categoryIcon">
+        <img
+          src="{{ category.icon }}"
+          alt="{{ category.name }}"
+          style="font-size: 10px; color: #28a745"
+        />
+      </div>
+      <div class="categoryInfo">
+        <div class="categoryName">{{ category.name }}</div>
+        <div class="categoryJobs">10k+ Jobs</div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-success allCategoriesButton">All Categories</button>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 imageCol">
+      <img src="/work.jpg" alt="Job Search" class="image" />
+    </div>
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <h1 class="header">Millions of Jobs. Find the one that suits you.</h1>
+      <p class="description">
+        Search all the open positions on the web. Get your own personalized
+        salary estimate. Read reviews on over 600,000 companies worldwide.
+      </p>
+      <ul class="features">
+        <li>
+          <i class="bi bi-check-circle checkIcon"></i> Bring to the table
+          win-win survival
+        </li>
+        <li>
+          <i class="bi bi-check-circle checkIcon"></i> Capitalize on low hanging
+          fruit to identify
+        </li>
+        <li>
+          <i class="bi bi-check-circle checkIcon"></i> But I must explain to you
+          how all this
+        </li>
+      </ul>
+      <button class="btn button">Get Started</button>
+    </div>
+  </div>
+</div>
+
+<div class="glassy" [dir]="isRtl ? 'rtl' : 'ltr'">
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h2 class="mainTitle">How it works?</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
+        <img src="/acc.svg" alt="icons" />
+        <h6 class="subTitle">Create Account</h6>
+        <p class="paragraph">
+          It’s very easy to open an account and start your journey.
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
+        <img src="/ediF.svg" alt="icons" />
+        <h6 class="subTitle">Complete your profile</h6>
+        <p class="paragraph">
+          Complete your profile with all the info to get attention of client.
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
+        <img src="/Edit.svg" alt="icons" />
+        <h6 class="subTitle">Apply job or hire</h6>
+        <p class="paragraph">
+          Apply & get your preferable jobs with all the requirements and get it.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-4 col-sm-12">
+      <div class="parent">
+        <p class="par">Why choose us?</p>
+        <h2>World of talent at your fingertips</h2>
+        <div class="accordion">
+          <div class="accordion-item" *ngFor="let item of accordionItems">
+            <div class="accordion-header" (click)="toggleAccordion(item)">
+              {{ item.title }}
+              <span *ngIf="isActive[item.title]">&#9650;</span>
+              <span *ngIf="!isActive[item.title]">&#9660;</span>
+            </div>
+            <div *ngIf="isActive[item.title]" class="accordion-content">
+              <p>{{ item.content }}</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn1">Learn More</button>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-4 col-sm-12">
+      <div class="photos">
+        <img src="/ff.jpg" alt="photo" class="photo" />
+      </div>
+    </div>
+  </div>
+</div>

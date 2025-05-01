@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ApplicantDetailsService } from "../../services/applicant-details.service";
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 import { Iuser } from "../../models/iuser";
 import { CommonModule } from "@angular/common";
 import { AdditionalQuestions } from "../../models/additional-questions";
