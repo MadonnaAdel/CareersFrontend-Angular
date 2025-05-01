@@ -1,5 +1,5 @@
-<section class="register">
-  <div class="container loginContain">
+<section class="register my-5 py-4">
+  <div class="container loginContain my-5">
     <div class="row registerForm overflow-hidden ">
       <div class="sectionRigth col-5 py-5">
         <div class="rigth-title">
@@ -12,41 +12,43 @@
       <div class="sectionLeft col-7 p-4">
         <div class="leftTitle text-center mb-4">
           <h2>Create Account</h2>
-          <p>
+          <p class="lead">
             Search all the open positions on the web. Get your own<br/> personalized salary estimate. Read reviews on over 600,000 <br/> companies worldwide.
           </p>
         </div>
         <form [formGroup]="registerForm" (ngSubmit)="onNext()">
-          <div class="form-group position-relative input-component">
+          <div class="form-group position-relative input-component mt-4">
             <label for="company-name" class="position-absolute bg-white label">Company Name</label>
             <input type="text" id="company-name" class="form-control" formControlName="companyName">
             <span *ngIf="registerForm.get('companyName')?.invalid && registerForm.get('companyName')?.touched" class="text-danger">
               Company Name is required.
             </span>
           </div>
-          <div class="form-group position-relative input-component mt-3">
+          <div class="form-group position-relative input-component mt-4">
             <label for="email" class="position-absolute bg-white label">Email Address</label>
             <input type="email" id="email" class="form-control" formControlName="companyEmail">
             <span *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-danger">
               Enter a valid email address.
             </span>
           </div>
-          <div class="form-group position-relative input-component mt-3">
+          <div class="form-group position-relative input-component mt-4">
             <label for="phone" class="position-absolute bg-white label">Phone</label>
             <input type="text" id="phone" class="form-control" formControlName="phone">
             <span *ngIf="registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched" class="text-danger">
               Phone number is required.
             </span>
           </div>
-          <div class="form-group position-relative input-component mt-3">
-            <label for="password" class="bg-white label">Password</label>
+          <div class="form-group position-relative input-component mt-4">
+
+            <label for="password" class=" position-absolute bg-white label">Password</label>
             <input type="password" id="password" class="form-control" formControlName="companyPassword">
             <span *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-danger">
               Password must be at least 6 characters.
             </span>
           </div>
-          <div class="form-group position-relative input-component mt-3">
-            <label for="confirmPassword" class="bg-white label">Confirm Password</label>
+          <div class="form-group position-relative input-component mt-4">
+
+            <label for="confirmPassword" class="position-absolute bg-white label">Confirm Password</label>
             <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword">
             <span *ngIf="registerForm.get('confirmPassword')?.invalid && registerForm.get('confirmPassword')?.touched" class="text-danger">
               Confirm Password must be at least 6 characters.
