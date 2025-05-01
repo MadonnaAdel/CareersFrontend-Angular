@@ -1,0 +1,104 @@
+.navbar {
+  background-color: #ffff;
+  z-index: 999;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+  height: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.link {
+  margin-top: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.companyContent{
+  margin-left: 40px;
+}
+.navbar-brand {
+  color: #ffff;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: var#3333;
+}
+
+.companylogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link.active,
+.navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link:hover,
+.navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link:focus {
+  color: var(--pprimary-Color);
+}
+
+.search {
+  color: #ffff;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.searchIcon {
+  border-right: 2px solid var(--pprimary-Color);
+}
+
+.logo {
+  width: 100px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] {
+  color: var(--secondary);
+}
+
+.main-btn {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.main-btn:hover {
+  background-color: #fff;
+  border: 1px solid #ffff;
+  color: var(--pprimary-Color);
+}
+
+.navbar-collapse.collapse {
+  position: relative;
+  display: none;
+  z-index: 999;
+}
+
+.navbar-collapse.collapse.show {
+  display: block;
+}
+
+.myaccount {
+  position: relative;
+  color: var(--secondary);
+  font-size: 24px;
+  border: 2px solid var(--secondary);
+  z-index: 999;
+  align-items: center;
+}
+
+.text {
+  font-size: 1rem;
+}
+
+.btnn {
+  background-color: var(--secondary);
+  color: white;
+  border: 1px solid var(--secondary) !important;
+}

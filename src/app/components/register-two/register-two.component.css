@@ -1,0 +1,113 @@
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 888.98px;
+    position: relative;
+  }
+  
+
+  
+  .register .loginContain .registerForm .label {
+    padding: 0 7px;
+    bottom: 31px;
+    left: 11px;
+    position: absolute;
+  }
+  .sectionLeft h2{
+    color: #275C45;
+  }
+  
+  .register .loginContain .registerForm .sectionRigth {
+    display: flex;
+    border-top-right-radius: 12.43px;
+    border-bottom-right-radius: 12.43px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    background: #F6F7FF;
+  }
+
+  .register .loginContain .registerForm .sectionRigth h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #275C45;
+  }
+  
+  .sectionRigth .rigth-img {
+    width: 444px;
+  }
+  .register .loginContain .registerForm {
+    border: 1px solid #25D366;
+    border-radius: 12.43px;
+  }
+  
+  @media (max-width: 790px) {
+    .register .loginContain {
+        justify-content: center;
+    }
+  
+    .register .registerForm .sectionRigth {
+        display: none !important;
+    }
+  
+    .register .loginContain .registerForm {
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+  
+    .register .loginContain .registerForm .sectionLeft {
+        width: 95%;
+    }
+  }
+  
+  @media (max-width: 712px) {
+    .register .loginContain .registerForm {
+        width: 95%;
+    }
+  }
+  
+  .register .loginContain .registerForm .sectionLeft .line {
+    width: 300px;
+    height: 1px;
+    background: rgb(119 119 119 / 24%);
+    color: #25D366;
+  }
+  
+  .errorMessage {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    margin-top: 5px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+  .github-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .github-button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .fab{
+    margin-right: 5px;
+  }
+  
+  a{
+    cursor: pointer;
+  }

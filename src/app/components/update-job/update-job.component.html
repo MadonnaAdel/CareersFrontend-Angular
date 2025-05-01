@@ -1,0 +1,97 @@
+
+<div class="parent bg-white col-md-9 mx-auto mt-5">
+    <h6 class="subTitle">Job Details</h6>
+    <form #jobForm="ngForm" (ngSubmit)="updateJob(jobForm.value)">
+        <div class="form-group">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" name="jobTitle" [(ngModel)]="job.JobTitle" placeholder="Enter job title">
+        </div>
+        <div class="form-group">
+            <label for="jobCategory">Job Category</label>
+            <select id="jobCategory" name="jobCategory" [(ngModel)]="job.JobCategory">
+                <option value="development" disabled selected>{{job.JobCategory}}</option>
+                <option value="development">Programming</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required minlength="50" maxlength="1000" rows="5"
+                [(ngModel)]="job.description" placeholder="Enter job description (50-1000 characters)"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="jobType">Job Type</label>
+            <select id="jobType" name="jobType" [(ngModel)]="job.JobType">
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+                <option value="Internship">Internship</option>
+                <option value="Contract">Contract</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="salaryFrom">Salary From</label>
+            <input type="number" id="salaryFrom" name="salaryFrom" [(ngModel)]="job.salary.from"
+                placeholder="Enter minimum salary">
+            <label for="salaryTo">Salary To</label>
+            <input type="number" id="salaryTo" name="salaryTo" [(ngModel)]="job.salary.to"
+                placeholder="Enter maximum salary">
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills</label>
+                <input type="text" id="skills" name="skills" [(ngModel)]="newSkill" placeholder="Enter required skills press enter" (keydown.enter)="addSkill()">
+        </div>
+        <div class="badge d-flex flex-wrap">
+            <span *ngFor="let skill of job.skills" class="bg-secondary-subtle text-black  p-2 m-2">{{skill}} <button
+                    type="button" class="btn btn-close" (click)="removeSkill(skill)"></button></span>
+        </div>
+        <div class="form-group">
+            <label for="jobHoursFrom">Job Hours From</label>
+            <input type="number" id="jobHoursFrom" name="jobHoursFrom" [(ngModel)]="job.JobHours.from" min="1" max="24"
+                placeholder="From">
+            <label for="jobHoursTo">Job Hours To</label>
+            <input type="number" id="jobHoursTo" name="jobHoursTo" [(ngModel)]="job.JobHours.to" min="1" max="24"
+                placeholder="To">
+        </div>
+        <div class="form-group">
+            <label for="jobLocationType">Job Location Type</label>
+            <select id="jobLocationType" name="jobLocationType" [(ngModel)]="job.JoblocationType">
+                <option value="Onsite">Onsite</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="jobLevel">Job Level</label>
+            <select id="jobLevel" name="jobLevel" [(ngModel)]="job.jobLevel">
+                <option value="EntryLevel">Entry Level</option>
+                <option value="MidLevel">Mid Level</option>
+                <option value="Senior">Senior</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="jobRequirements">Job Requirements</label>
+            <input type="text" id="Requirement" name="Requirement" [(ngModel)]="newRequirement"
+                placeholder="Select job requirements press enter" (keydown.enter)="addRequirement()" >
+        </div>
+        <div class="badge  d-flex flex-wrap">
+            <span *ngFor="let requirement of job.jobRequirements"
+                class="bg-secondary-subtle text-black  p-2 m-2">{{requirement}} <div
+                    class="btn btn-close" (click)="removeRequirement(requirement)"></div></span>
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status" name="status" [(ngModel)]="job.status">
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+            </select>
+        </div>
+
+        <div class="btns">
+            <button type="submit" class="postJob">Update Job</button>
+        </div>
+    </form>
+    <div *ngIf="isUpdated" class="w-100 border border-1 border-success bg-success-subtle p-2 rounded-2 text-center my-3"> success update job</div>
+</div>

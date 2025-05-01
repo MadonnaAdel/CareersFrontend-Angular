@@ -1,0 +1,58 @@
+<div class="container pt-5">
+  <div class="shadow-lg rounded-4 mt-5 ">
+
+    <div class="row d-flex justify-content-center mt-5">
+      <div class="  col-md-8 ">
+
+        <form [formGroup]="additionalQuestionsForm" (ngSubmit)="onSubmit()">
+          <input type="hidden" formControlName="jobId">
+
+          <div class="form-group ">
+            <label for="FirstQuestion">Question 1</label>
+            <input type="text" id="FirstQuestion" formControlName="FirstQuestion" class="form-control">
+            <div
+              *ngIf="additionalQuestionsForm.get('FirstQuestion')?.touched && additionalQuestionsForm.get('FirstQuestion')?.invalid"
+              class="text-danger">
+              <p *ngIf="additionalQuestionsForm.get('FirstQuestion')?.errors?.['required']">Question 1 is required</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="SecondQuestion">Question 2</label>
+            <input type="text" id="SecondQuestion" formControlName="SecondQuestion" class="form-control">
+            <div
+              *ngIf="additionalQuestionsForm.get('SecondQuestion')?.touched && additionalQuestionsForm.get('SecondQuestion')?.invalid"
+              class="text-danger">
+              <p *ngIf="additionalQuestionsForm.get('SecondQuestion')?.errors?.['required']">Question 2 is required</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="ThirdQuestion">Question 3</label>
+            <input type="text" id="ThirdQuestion" formControlName="ThirdQuestion" class="form-control">
+            <div
+              *ngIf="additionalQuestionsForm.get('ThirdQuestion')?.touched && additionalQuestionsForm.get('ThirdQuestion')?.invalid"
+              class="text-danger">
+              <p *ngIf="additionalQuestionsForm.get('ThirdQuestion')?.errors?.['required']">Question 3 is required</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="FourthQuestion">Question 4</label>
+            <input type="text" id="FourthQuestion" formControlName="FourthQuestion" class="form-control">
+            <div
+              *ngIf="additionalQuestionsForm.get('FourthQuestion')?.touched && additionalQuestionsForm.get('FourthQuestion')?.invalid"
+              class="text-danger">
+              <p *ngIf="additionalQuestionsForm.get('FourthQuestion')?.errors?.['required']">Question 4 is required</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary addQuestion" [disabled]="!additionalQuestionsForm.valid">Add
+            Question</button>
+        </form>
+      </div>
+
+
+    </div>
+
+  </div>

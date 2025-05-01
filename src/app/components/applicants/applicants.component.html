@@ -1,0 +1,107 @@
+<section class="applicants  p-5" *ngIf="applicantAnswers.additionalFormSubmitted" else otherContent>
+    <div class="container mt-5">
+        <div class="applicant custmBorder  ">
+            <div class="headSection ">
+                <div class=" mx-4  row justify-content-between align-items-center">
+                    <div class="seekerImge custmBorder col-lg-3   col-2 col-md-4 col-sm-6">
+                        <img [src]="jobSeeker?.profilePhoto" alt="applicant Image" width="100%" height="100%"
+                            class="rounded-circle" />
+                    </div>
+                    <div class="applicantInfo col-lg-4 col-md-8 col-sm-11">
+                        <h6 class=" ">{{jobSeeker?.firstName}} {{jobSeeker?.lastName}}</h6>
+                        <p class="salery text-green p">$3k-$4k/mo</p>
+                        <div class="skils d-flex flex-wrap ">
+                            <div class="skill px-3 py-1 text-secondary bg-secondary-subtle rounded-3 d-block m-1"
+                                *ngFor="let skill of jobSeeker?.skills">{{skill}}</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 mt-5">
+                        <div class="userAddress px-4 py-2 text-secondary bg-secondary-subtle rounded-3 m-auto ">
+                            {{jobSeeker?.country}},
+                            {{jobSeeker?.city}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="applicantBody m-5">
+                <ng-container *ngIf="jobSeeker?.overview">
+                    <p class="lead p">Professional Overview</p>
+                    <p class="Overview custmBorder bg-body-secondary rounded-3 p-3 text-secondary p">
+                        {{jobSeeker?.overview}}
+                    </p>
+                </ng-container>
+
+                <p class="lead mt-4 p">{{qusetions.FirstQuestion}}</p>
+                <p class="Overview custmBorder bg-body-secondary rounded-3 p-3 text-secondary p">
+                    {{applicantAnswers.FirstAnswer}}
+                </p>
+                <p class="lead mt-4 p">{{qusetions.SecondQuestion}}</p>
+                <p class="Overview custmBorder bg-body-secondary rounded-3 p-3 text-secondary p">
+                    {{applicantAnswers.SecondAnswer}}
+                </p>
+                <p class="lead mt-4 p">{{qusetions.ThirdQuestion}}</p>
+                <p class="Overview custmBorder bg-body-secondary rounded-3 p-3 text-secondary p">
+                    {{applicantAnswers.thirdAnswer}}
+                </p>
+                <p class="lead mt-4 p">{{qusetions.FourthQuestion}}</p>
+                <p class="Overview custmBorder bg-body-secondary rounded-3 p-3 text-secondary p">
+                    {{applicantAnswers.FourthAnswer}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end align-items-center mt-4">
+        <button class="btn btn-outline-danger me-3 py-2 px-4"   (click)="applicantAnswers._id && updateApplicantStatus('rejected', applicantAnswers._id)"
+        >Reject</button>
+        <button class="btn btn-success py-2 px-4"   (click)="applicantAnswers._id && updateApplicantStatus('accepted', applicantAnswers._id)"
+        >Accept</button>
+    </div>
+</section>
+
+
+<!-- Modal
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn btn-close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body text-center p-2">
+                <img src="/congratsAcceptance.svg" alt="" width="80%">
+                <h5 class="text-success fw-bold ">
+                    Congratulations on Your New Hire!
+                </h5>
+                <p>
+                    We are thrilled to welcome the newest member of your team. Wishing you great success and a
+                    prosperous future
+                    together!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="reject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn btn-close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body text-center p-2">
+                <div class="modal-body text-center p-2">
+                    <img src="/Leader-pana.svg" alt="">
+                    <h5 class="text-danger fw-bold ">
+                        sorry
+                    </h5>
+                    <p>
+                        We are thrilled to welcome the newest member of your team. Wishing you great success and a
+                        prosperous future
+                        together!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

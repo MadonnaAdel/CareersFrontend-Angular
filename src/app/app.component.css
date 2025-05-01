@@ -1,0 +1,49 @@
+.job-list-container {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .job-list-header,
+  .job-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  
+  .job-list-header {
+    font-weight: bold;
+  }
+  
+  .job-list-item {
+    border-top: 1px solid #ddd;
+  }
+  
+  .job-list-item:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .active {
+    color: green;
+  }
+  
+  .expired {
+    color: red;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+  }
+  
+  .pagination button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0 8px;
+  }
+  

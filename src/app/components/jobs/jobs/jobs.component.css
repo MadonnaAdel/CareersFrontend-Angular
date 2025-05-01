@@ -1,0 +1,121 @@
+.sorted {
+  color: #262626;
+  font-size: medium;
+  font-weight: 500;
+}
+.mainTitle {
+  color: #262626;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.active {
+  color: #01a84d;
+}
+
+.expired {
+  color: #e45959;
+}
+
+.aplicant {
+  color: #262626;
+  font-size: small;
+}
+.icons {
+  margin-left: 20px;
+}
+.parent {
+  padding: 40px;
+}
+
+.tableTh {
+  font-size: medium;
+  color: #262626;
+}
+.selectorOption {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.selectOption {
+  border-radius: 8px;
+  border: 1px solid #b4e0d3;
+  color: #989da6;
+  margin-left: 5px;
+}
+.theTable {
+  border: 1px solid #b4e0d3;
+  border-radius: 16px !important;
+  margin-top: 30px;
+  padding: 40px;
+}
+
+.jobRequirements {
+  display: flex;
+  flex-wrap: wrap;
+}
+.jobRequirements .requirement {
+  background-color: #daeff2;
+  padding: 7px;
+  color: #727272;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.jobTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.additional-icons {
+  display: flex;
+  margin-left: 10px;
+}
+
+.additional-icons i {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.pagination {
+  margin-top: 30px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a.prev,
+.pagination a.next {
+  background: linear-gradient(to right, #f9fffe, #e7ffe0);
+}
+
+.pagination a.active {
+  background-color: #96e3b9;
+  color: white;
+}
+
+.pagination a:hover {
+  background-color: #e0e0e0;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.active {
+  font-weight: bold;
+}

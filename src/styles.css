@@ -1,0 +1,83 @@
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --primary: #275C45;
+  --secondary: #01A84D;
+  --Third: #25D366;
+  --Forth: #96E3B9;
+  --Fifth:#FAFCF8;
+  --background: #F6F7FF;
+  --white: #ffffff;
+  --Paragraph01: #262626;
+  --Paragraph02: #727272;
+  --PlaceHolder: #989DA6;
+  --success: #3AAB67;
+  --warning:#FF974C;
+  --danger: #E45959;
+  --border01:#B4E0D3;
+  --border02:#DAEFF2;
+  --border03:#EFF2FB;
+  --gradient01: linear-gradient(#5DAE7B, #275C45);
+  --gradient02: linear-gradient(#F9FFFE, #E7FFE0);
+  --gradient03: linear-gradient(#FAFBFA, #E5EEDD);
+}
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif !important;
+}
+
+
+h5{
+font-size: 24px;
+font-weight: bold;
+}
+
+.form-check-input:checked{
+    background-color: var(--primary) !important;
+  border-color: var(--border02) !important;
+
+
+}
+.form-control:focus,.form-select:focus {
+border-color: var(--Third) !important;
+box-shadow: 0 0 0 0.1rem #19875424 !important;
+}
+
+
+
+.text-green{
+  color: var(--Third);
+}
+
+.form-control:focus {
+border-color: var(--Third) !important;
+box-shadow: 0 0 0 0.1rem #19875424 !important;
+}
+
+
+
+
+.fa-classic, .fa-regular, .fa-solid{
+  font-family: "Font Awesome 6 Free" !important;
+
+}
+
+
+.fa-brands {
+  font-family: "Font Awesome 6 Brands" !important;
+}
+

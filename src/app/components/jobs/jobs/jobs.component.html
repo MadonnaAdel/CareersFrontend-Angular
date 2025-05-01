@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="parent mt-5">
+  <div class="row d-flex justify-content-center ">
+    <div class="col-md-9">
+      <h6 class="text-success mt-4">My Jobs</h6>
+      <div class="shadow-lg rounded-4 p-4">
+      <div class="theTable ">
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <td class="tableTh" scope="col">Job Title</td>
+            <td class="tableTh" scope="col">Applicants</td>
+            <td class="tableTh" scope="col">Status</td>
+            <td class="tableTh" scope="col">Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let job of paginatedJobs">
+            <td>
+              <h6 class="jobTitle">{{job.JobTitle}}</h6>
+              <div class="jobRequirements">
+                <ng-container *ngFor="let requirement of job.jobRequirements; let i = index">
+                  <span class="requirement">{{requirement}}{{i < job.jobRequirements.length - 1 ? ', ' : ''}}</span>
+                </ng-container>
+              </div>
+            </td>
+            <td class="aplicant" [routerLink]="['/Company/applicantcards',job._id]">{{job.JobSeekersCounts}} Applicants</td>
+            <td [ngClass]="{'active': job.status === 'Open', 'expired': job.status === 'Closed'}">{{job.status}}</td>
+            <td>
+              <div class="icons">
+                <i class="fa-solid fa-ellipsis-vertical" style="color: #1a1a1a;" (click)="toggleIcons()"></i>
+                <div *ngIf="showIcons" class="additional-icons">
+                  <i class="fa-regular fa-pen-to-square" style="color: #01a84d;"
+                  [routerLink]="['/Company/update-job',job._id]"></i>
+                  <i class="fa-regular fa-trash-can" style="color: #e45959;" (click)="deleteJob(job._id)"></i>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+
+ <div class="pagination">
+    <a href="#" class="prev" (click)="changePage($event, currentPage - 1)" [class.disabled]="currentPage === 1">&lt;</a>
+    <a href="#" *ngFor="let page of totalPages; let i = index" 
+       (click)="changePage($event, i + 1)" 
+       [class.active]="currentPage === i + 1">{{ i + 1 }}</a>
+    <a href="#" class="next" (click)="changePage($event, currentPage + 1)" [class.disabled]="currentPage === totalPages.length">&gt;</a>
+  </div>
+
+      </div>
+  
+
+ 
+</div>
+</div></div></div>

@@ -1,0 +1,35 @@
+<section class="register">
+    <div class="container loginContain">
+      <div class="row registerForm">
+        <h6 class="text-success mt-4">Settings</h6>
+
+        <div class="sectionLeft  align-items-center   p-4">
+          <div class="leftTitle text-center mb-4">
+            
+          </div>
+          <form [formGroup]="rsetpassForm" (ngSubmit)="onSubmit()">
+            <div class="form-group position-relative input-component mt-3">
+              <label for="newPassword" class="bg-white label">New Password</label>
+              <input type="password" id="newPassword" class="form-control" formControlName="newPassword">
+              <span *ngIf="rsetpassForm.get('newPassword')?.invalid && rsetpassForm.get('newPassword')?.touched" class="text-danger">
+                Password must be at least 6 characters.
+              </span>
+            </div>
+            <div class="form-group position-relative input-component mt-3">
+              <label for="confirmPassword" class="bg-white label">Confirm New Password</label>
+              <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+              <span *ngIf="rsetpassForm.get('confirmPassword')?.invalid && rsetpassForm.get('confirmPassword')?.touched && !rsetpassForm.hasError('passwordMismatch')" class="text-danger">
+                Confirm password is required and must be the same as password.
+              </span>
+              <span *ngIf="rsetpassForm.hasError('passwordMismatch')" class="text-danger">
+                Passwords do not match.
+              </span>
+            </div>
+            <button type="submit" class="btn btn-success w-100 m-auto mb-3 mt-3 d-flex align-items-center justify-content-center">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  

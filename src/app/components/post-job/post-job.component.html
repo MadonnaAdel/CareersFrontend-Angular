@@ -1,0 +1,193 @@
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center py-5">
+    <div class="col-md-9">
+      <h6 class="subTitle mt-4">Job Details</h6>
+      <div class="shadow-lg rounded-4 p-4">
+        <form [formGroup]="jobForm" (ngSubmit)="addJob()">
+          <label for="jobTitle">Job Title</label>
+          <input type="text" id="jobTitle" formControlName="JobTitle" required>
+          @if(jobForm.get('JobTitle')?.touched){
+          <div class="text-danger">
+            @if(jobForm.get('JobTitle')?.errors?.['required']){
+            <p> JobTitle is required</p>
+            }
+          </div>
+          }
+          <div class="form-group">
+            <label for="jobCategory">Job Category</label>
+            <select id="jobCategory" formControlName="JobCategory">
+              <option value="Programming">Programming</option>
+              <option value="Accounting">Accounting</option>
+              <option value="Finance">Finance</option>
+              <option value="Health Care">Health Care</option>
+              <option value="design">Design</option>
+              <option value="marketing">Marketing</option>
+            </select>
+          </div>
+          @if(jobForm.get('JobCategory')?.touched){
+          <div class="text-danger">
+            @if(jobForm.get('JobCategory')?.errors?.['required']){
+            <p> JobCategory is required</p>
+            }
+
+          </div>
+          }
+
+          <!-- jobSubCategory -->
+          <label for="jobSubCategory">Job SubCategory</label>
+          <input type="text" id="jobSubCategory" formControlName="JobSubCategory">
+          @if(jobForm.get('JobSubCategory')?.touched){
+          <div class="text-danger">
+            @if(jobForm.get('JobSubCategory')?.errors?.['required']){
+            <p> JobSubCategory is required</p>
+            }
+
+          </div>
+          }
+          <!-- description -->
+          <label for="description">Description</label>
+          <textarea id="description" formControlName="description" required minlength="50" maxlength="1000"></textarea>
+          <div *ngIf="jobForm.get('description')?.touched && jobForm.get('description')?.invalid" class="text-danger">
+            <p *ngIf="jobForm.get('description')?.errors?.['required']">Description is required</p>
+            <p *ngIf="jobForm.get('description')?.errors?.['minlength']">Description must be at least 50 characters</p>
+            <p *ngIf="jobForm.get('description')?.errors?.['maxlength']">Description cannot exceed 1000 characters</p>
+          </div>
+
+
+          <!-- jobType -->
+          <label for="jobType">Job Type</label>
+          <select id="jobType" formControlName="JobType">
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Internship">Internship</option>
+            <option value="Contract">Contract</option>
+            <option value="Freelance">Freelance</option>
+          </select>
+
+          <!-- Salary -->
+          <div formGroupName="salary">
+            <label for="salaryFrom">Salary From</label>
+            <input type="number" id="salaryFrom" formControlName="from" required>
+            <div *ngIf="jobForm.get('salary.from')?.touched && jobForm.get('salary.from')?.invalid" class="text-danger">
+              <p *ngIf="jobForm.get('salary.from')?.errors?.['required']">Salary from is required</p>
+            </div>
+
+            <label for="salaryTo">Salary To</label>
+            <input type="number" id="salaryTo" formControlName="to" required>
+            <div *ngIf="jobForm.get('salary.to')?.touched && jobForm.get('salary.to')?.invalid" class="text-danger">
+              <p *ngIf="jobForm.get('salary.to')?.errors?.['required']">Salary to is required</p>
+            </div>
+          </div>
+          <!-- skills -->
+          <label for="skills">Skills</label>
+          <!-- <mat-form-field> -->
+          <mat-select formControlName="skills" multiple>
+            <mat-option *ngFor="let skill of skillsList" [value]="skill">{{ skill }}</mat-option>
+          </mat-select>
+          <!-- </mat-form-field> -->
+          @if(jobForm.get('skills')?.touched){
+          <div class="text-danger">
+            @if(jobForm.get('skills')?.errors?.['required']){
+            <p> skills is required</p>
+            }
+
+          </div>
+          }
+          <!-- Job Hours -->
+          <div formGroupName="JobHours">
+            <label for="jobHoursFrom">Job Hours From</label>
+            <input type="number" id="jobHoursFrom" formControlName="from" required>
+            <div *ngIf="jobForm.get('JobHours.from')?.touched && jobForm.get('JobHours.from')?.invalid"
+              class="text-danger">
+              <p *ngIf="jobForm.get('JobHours.from')?.errors?.['required']">Job hours from is required</p>
+            </div>
+
+            <label for="jobHoursTo">Job Hours To</label>
+            <input type="number" id="jobHoursTo" formControlName="to" required>
+            <div *ngIf="jobForm.get('JobHours.to')?.touched && jobForm.get('JobHours.to')?.invalid" class="text-danger">
+              <p *ngIf="jobForm.get('JobHours.to')?.errors?.['required']">Job hours to is required</p>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div formGroupName="jobLocation">
+            <label for="state">State</label>
+            <input type="text" id="state" formControlName="State" required>
+            <div *ngIf="jobForm.get('jobLocation.State')?.touched && jobForm.get('jobLocation.State')?.invalid"
+              class="text-danger">
+              <p *ngIf="jobForm.get('jobLocation.State')?.errors?.['required']">State is required</p>
+            </div>
+
+            <label for="government">Government</label>
+            <input type="text" id="government" formControlName="government" required>
+            <div
+              *ngIf="jobForm.get('jobLocation.government')?.touched && jobForm.get('jobLocation.government')?.invalid"
+              class="text-danger">
+              <p *ngIf="jobForm.get('jobLocation.government')?.errors?.['required']">Government is required</p>
+            </div>
+          </div>
+          <!-- jobLocationType -->
+          <label for="jobLocationType">Job Location Type</label>
+          <select id="jobLocationType" formControlName="JoblocationType">
+            <option value="Onsite">Onsite</option>
+            <option value="Remote">Remote</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+          @if(jobForm.get('JoblocationType')?.touched){
+          <div class="text-danger">
+            @if(jobForm.get('JoblocationType')?.errors?.['required']){
+            <p> JoblocationType is required</p>
+            }
+
+          </div>
+          }
+          <!--job Level  -->
+          <label for="jobLevel">Job Level</label>
+          <select id="jobLevel" formControlName="jobLevel">
+            <option value="EntryLevel">EntryLevel</option>
+            <option value="Senior">Senior</option>
+            <option value="">Expert</option>
+            <option value="MidLevel">MidLevel</option>
+
+          </select>
+          @if(jobForm.get('jobLevel')?.touched){
+          <div class="text-danger">
+            @if(jobForm.get('jobLevel')?.errors?.['required']){
+            <p> jobLevel is required</p>
+            }
+
+          </div>
+          }
+          <!-- jobRequirements -->
+          <label for="jobRequirements">Job Requirements</label>
+
+          <mat-select formControlName="jobRequirements" multiple>
+            <mat-option *ngFor="let requirement of requirementsList" [value]="requirement">{{ requirement
+              }}</mat-option>
+          </mat-select>
+          @if(jobForm.get('jobRequirements')?.touched){
+          <div class="text-danger">
+            @if(jobForm.get('jobRequirements')?.errors?.['required']){
+            <p> jobRequirements is required</p>
+            }
+
+          </div>
+          }
+          <!-- Status -->
+          <label for="status">Status</label>
+          <select id="status" formControlName="status">
+            <option value="Open">Open</option>
+            <option value="Closed">Closed</option>
+          </select>
+          <input type="hidden" formControlName="companyId">
+
+          <div class="form-group">
+            <button [disabled]="jobForm.invalid" type="submit" class="postJob">Post Job</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

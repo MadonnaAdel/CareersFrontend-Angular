@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="d-flex flex-column vh-100 sidebar col-3 pt-5">
+      <div class="flex-column mt-4 w-85 dashboard-container mt-5 ">
+        <div class="d-flex align-items-center element" [class.active]="activeItem === 'post-job'" routerLink="/Company/addJob">
+          <span *ngIf="activeItem === 'post-job'" class="active-flag"></span>
+          <a class="nav-link" [class.active]="activeItem === 'post-job'" >
+           <img src="addPost.svg" alt="" /> <span class="title text-nowrap">Post Job</span>
+          </a>
+        </div>
+        <div class="d-flex align-items-center element" [class.active]="activeItem === 'my-jobs'" routerLink="/Company/theJobs">
+          <span *ngIf="activeItem === 'my-jobs'" class="active-flag"></span>
+          <a class="nav-link" [class.active]="activeItem === 'my-jobs'" >
+          <img src="office bag.svg" alt="" />  <span class="title text-nowrap">My Jobs</span>
+          </a>
+        </div>
+        <div class="d-flex align-items-center element" [class.active]="activeItem === 'setting'" routerLink="/Company/reset" >
+          <span *ngIf="activeItem === 'setting'" class="active-flag"></span>
+          
+          <a class="nav-link" [class.active]="activeItem === 'setting'" >
+            <img src="Setting.svg" alt="" /><span class="title text-nowrap">Setting</span>
+          </a>
+        </div>
+        <div class="d-flex align-items-center element" [class.active]="activeItem === 'log-out'" (click)="logOut()"  >
+          <span *ngIf="activeItem === 'log-out'" class="active-flag"></span>
+          
+          <a class="nav-link" [class.active]="activeItem === 'log-out'" >
+           <img src="Logout.svg" alt="" /> <span class="text-danger text-nowrap"> Log Out</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

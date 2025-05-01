@@ -1,0 +1,47 @@
+.applicants {
+    border-radius: 10px;
+    box-shadow: 0 0 13px 0px #00000026;
+    margin: 120px 10px 10px;
+}
+
+.form-select {
+    width: 90%;
+}
+
+.applicant {
+    border-radius: 10px;
+}
+
+.headSection {
+    border-bottom: 1px solid var(--border01);
+    padding: 10px;
+}
+
+.seekerImge {
+ 
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.custmBorder {
+    border: 1.5px solid var(--border01);
+}
+
+@media (max-width:460px) {
+    .p {
+        font-size: 12px;
+    }
+    .jobTitle{
+        font-size: 22px !important;
+    }
+
+    .headApplicant {
+        flex-direction: column;
+        margin: auto;
+    }
+}
+.userAddress {
+    width: fit-content;
+}

@@ -1,0 +1,135 @@
+<section class="register">
+  <div class="container loginContain">
+    <div class="row registerForm overflow-hidden">
+      <div class="sectionRigth col-5">
+        <div class="rigth-title">
+          <h2>Find the one that<br/> suits your Company</h2>
+        </div>
+        <div class="rigth-img">
+          <img src="/Usability testing-pana 1.png">
+        </div>
+      </div>
+      <div class="sectionLeft col-7 p-5">
+        <div class="leftTitle text-center mb-4">
+          <h2>Create Account</h2>
+          <p>
+            Search all the open positions on the web. Get your own<br/> personalized salary estimate. Read reviews on over 600,000 <br/> companies worldwide.
+          </p>
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="createAccount()">
+          <div class="nameInputs d-flex align-items-center">
+            <div class="form-group position-relative input-component w-50 me-2">
+              <div class="position-relative">
+                <label for="city" class="position-absolute bg-white label">City</label>
+                <select id="city" class="form-select" formControlName="city">
+                  <option value=""></option>
+                  <option value="Aswan">Aswan</option>
+                  <option value="Luxor">Luxor</option>
+                  <option value="Sharm El Sheikh">Sharm El Sheikh</option>
+                  <option value="Giza">Giza</option>
+                  <option value="Alexandria">Alexandria</option>
+                  <option value="Cairo">Cairo</option>
+                  <option value="Hurghada">Hurghada</option>
+                  <option value="Helwan">Helwan</option>
+                  <option value="Sohag">Sohag</option>
+                  <option value="Quesna">Quesna</option>
+                  <option value="Al Khankah">Al Khankah</option>
+                  <option value="el-Arab">el-Arab</option>
+                  <option value="Badr">Badr</option>
+                  <option value="Sadat City">Sadat City</option>
+                  <option value="Obour">Obour</option>
+                  <option value="New Cairo">New Cairo</option>
+                  <option value="6th of October City">
+                    6th of October City
+                  </option>
+                  <option value="Banha">Banha</option>
+                  <option value="Shibin El Kom">Shibin El Kom</option>
+                  <option value="Qalyub">Qalyub</option>
+                  <option value="Marsa Matruh">Marsa Matruh</option>
+                  <option value="Arish">Arish</option>
+                  <option value="Kafr El Sheikh">Kafr El Sheikh</option>
+                  <option value="El-Mahalla El-Kubra">
+                    El-Mahalla El-Kubra
+                  </option>
+                  <option value="Damietta">Damietta</option>
+                  <option value="Assiut">Assiut</option>
+                  <option value="Qena">Qena</option>
+                  <option value="Sohag">Sohag</option>
+                  <option value="Minya">Minya</option>
+                  <option value="Beni Suef">Beni Suef</option>
+                  <option value="Faiyum">Faiyum</option>
+
+
+                </select>
+                <span *ngIf="registerForm.get('city')?.invalid && registerForm.get('city')?.touched" class="text-danger">
+                  City is required.
+                </span>
+              </div>
+            </div>
+            <div class="form-group position-relative input-component w-50">
+              <div class="position-relative">
+                <label for="country" class="position-absolute bg-white label">Country</label>
+                <select id="country" class="form-select" formControlName="state">
+                  <option value=""></option>
+                  <option value="Egypt">Egypt</option>
+                </select>
+                <span *ngIf="registerForm.get('state')?.invalid && registerForm.get('state')?.touched" class="text-danger">
+                  Country is required.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group input-component mt-4">
+            <div class="position-relative">
+              <label for="category" class="bg-white label">Category</label>
+              <select id="category" class="form-select" name="category" formControlName="companyIndustry">
+                <option value=""></option>
+                <option value="Technology">Technology</option>
+                <option value="Health Care">Health Care</option>
+              </select>
+              <span *ngIf="registerForm.get('companyIndustry')?.invalid && registerForm.get('companyIndustry')?.touched" class="text-danger">
+                Category is required.
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group input-component mt-4">
+            <div class="position-relative">
+              <label for="companySize" class="bg-white label">Company Size</label>
+              <input  id="companySize" class="form-select" name="companySize" formControlName="companySize" placeholder="Enter the employee">
+
+              <span *ngIf="registerForm.get('companySize')?.invalid && registerForm.get('companySize')?.touched" class="text-danger">
+                Company Size is required.
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group input-component mt-4">
+            <div class="position-relative">
+              <label for="foundedYear" class="bg-white label">Founded Year</label>
+              <select id="foundedYear" class="form-select" name="foundedYear" formControlName="foundedYear">
+                <option value=""></option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+              <span *ngIf="registerForm.get('foundedYear')?.invalid && registerForm.get('foundedYear')?.touched" class="text-danger">
+                Founded Year is required.
+              </span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100 m-auto mb-3 mt-3 d-flex align-items-center justify-content-center"  >
+            Create account
+          </button>
+        </form>
+        <p>Already have an account? <a  class="text-success text-decoration-none"><span>Sign in</span></a></p>
+
+      
+       
+      </div>
+    </div>
+  </div>
+</section>

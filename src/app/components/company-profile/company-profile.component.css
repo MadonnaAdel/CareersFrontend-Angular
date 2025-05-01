@@ -1,0 +1,305 @@
+
+   .sidebar {
+    background-color: #fff;
+     padding: 20px; 
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.header {
+  background: no-repeat center url("/30080078_benner_1.jpg");
+  width: 100%;
+   border-bottom: 1px solid #dee2e6;
+   background-size: cover;
+   height: 40%;
+   padding: 100px;
+ }
+ 
+ .header h1 {
+   margin: 0;
+   font-size: 1.5em;
+ }
+ @media (max-width: 576px) {
+  .header {
+    padding: 30px;
+  }
+ }
+ @media (max-width: 768px) {
+  .header {
+    padding: 50px;
+  }
+ }
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile .img {
+    margin-bottom: 10px;
+    position: absolute;
+    top: -6.875rem;
+    left: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border:14px solid var(--white);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
+
+.profile h5 {
+    margin: 10px 0;
+}
+
+.profile p {
+    color: #666;
+    margin-bottom: 20px;
+}
+.breakLine{
+  color:#28a745 ;
+}
+.share-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-success{
+  width: 100%;
+}
+.details p,
+.contact-info p,
+.social-media p,
+.other-candidates p {
+    margin: 10px 0;
+}
+.companyCareer{
+  color: #01a84d;
+  font-size: medium;
+}
+.companyName,.social, .contactTitle{
+  font-size: 20px;
+  color: #262626;
+  margin-bottom: 10px;
+}
+.contact-info h6,
+.social-media h6,
+.other-candidates h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.socialIcons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.socialIcons div i{
+  margin: 0 !important;}
+i{
+  margin-right: 10px !important;
+}
+.icon{
+  font-size: 40px;
+  align-items: center !important;
+  margin-left: 30px !important;
+}
+.time{
+  color:#989DA6 ;
+}
+.cardPara{
+  margin-top: 10px !important;
+  margin-right: 10px !important;
+}
+.candidate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.candidate img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.show-more-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+  .other-candidates{
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 70px;
+  border-radius: 8px;
+}
+
+
+.company-overview{
+  margin-left: 50px;
+  border: 1px solid #989DA6;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+}
+
+.OtherCandidatesTitle{
+  font-size: 20px;
+  color: var(--Paragraph01);
+  font-weight:500;
+  position: relative;
+  bottom: 30px;
+  background-color: #ffffff;
+  display: inline;
+  padding: 8px;
+}
+.titleOverview {
+  font-size: 20px;
+  color: var(--Paragraph01);
+  font-weight:500;
+  position: relative;
+  bottom: 45px;
+  background-color: #ffffff;
+  display: inline;
+  padding: 8px;
+} 
+
+.vacancy{
+  margin-left: 50px;
+ 
+}
+
+.job-card {
+   background-color: #FAFCF8;
+  border: 1px solid #96E3B9;
+  border-radius: 18px;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.requirments{
+  display: flex;
+  flex-wrap: wrap;
+}
+.require, .paraBackground{
+  background-color: #DAEFF2;
+  padding: 7px;
+  color: #727272;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  
+}
+.btns{
+  display: flex;
+  justify-content: flex-end;
+}
+.Apply{
+  background-color: #01A84D;
+  border: 1px solid #01A84D !important;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.vacancyTitle{
+  font-size: 24px;
+  font-weight: bold;
+  color: #275C45;
+}
+.imgTitle{
+  display: flex;
+  justify-content:space-between;
+}
+.card {
+  background-color: var(--background);
+  border: none !important;
+  border-radius: 1rem;
+  padding: 20px;
+  width: 70%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-left: 60px;
+}
+
+.arrowLeft {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 20px solid var(--background);
+  border-bottom: 20px solid transparent;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+.cardSubtitleContainer{
+  display: flex;
+}
+.cardSubtitleContainer p{
+  margin: 0px;
+}
+.cardSubtitle {
+  font-size: 1em;
+  color: #4CAF50;
+}
+
+.cardText {
+  font-size: 0.9em;
+  color: #666;
+  margin: 10px 0;
+}
+
+.dateRange {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--primary);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  width: 50%;
+}
+
+@media (max-width: 575.98px) {
+  .card {
+    width: 96% ;
+    margin: 1rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .card {
+    width: 90% ;
+  }
+}

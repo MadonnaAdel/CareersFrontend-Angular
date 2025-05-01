@@ -1,0 +1,109 @@
+<div *ngIf="selectedCompany">
+  <div class="">
+    <header class="header mt-5"></header>
+
+  </div>
+
+  <div class="container mt-5">
+    <div class="row ">
+      <div class="col-md-3">
+        <div class="sidebar position-relative">
+          <div class="profile">
+            <div class="img position-absolute overflow-hidden shadow-lg">
+              <img src="{{selectedCompany.companyImage}} " alt="company logo" width="100%" height="100%"
+                class="d-inline-block align-top  rounded-circle">
+
+            </div>
+            <h5>{{ selectedCompany.companyName }}</h5>
+            <p>{{ selectedCompany.companyIndustry }}</p>
+
+          </div>
+
+          <div class="details">
+            <p class="paraBackground"><i class="fa-solid fa-location-dot"></i> {{ selectedCompany.city }}, {{
+              selectedCompany.state }}</p>
+            <p class="paraBackground"><i class="fa-solid fa-user"></i> {{ selectedCompany.companySize }} </p>
+            <p class="paraBackground"><i class="fa-solid fa-calendar"></i> {{ selectedCompany.foundedYear }}
+            </p>
+          </div>
+          <hr class="breakLine">
+          <div class="contact-info">
+            <h6 class="contactTitle">Contact Info</h6>
+            <p class="paraBackground"><i class="fa-solid fa-phone"></i>{{ selectedCompany. phone }} </p>
+            <p class="paraBackground text-nowrap overflow-hidden ">
+              <i class="fa-solid fa-envelope"></i>
+              <a [href]="'mailto:' + selectedCompany.companyEmail">
+                {{ selectedCompany.companyEmail }}
+              </a>
+            </p>
+          </div>
+          <hr class="breakLine">
+          <div class="social-media">
+            <h6 class="social">Social Media</h6>
+            <div class="socialIcons">
+              <div class="">
+                <i class="fa-brands fa-square-facebook icon" style="color: #01a84d;"></i>
+
+              </div>
+              <div class="">
+                <i class="fa-brands fa-linkedin icon" style="color: #01a84d;"></i>
+
+              </div>
+              <div class="">
+                <i class="fa-brands fa-square-instagram icon" style="color: #01a84d;"></i>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="other-candidates">
+          <p class="OtherCandidatesTitle">Other Candidates</p>
+          <div class="candidate">
+            <img src="/2.svg" alt="Candidate">
+            <div class="companyContent">
+              <p class="companyName">Julia Ark</p>
+              <p class="companyCareer">Graphic Designer</p>
+            </div>
+          </div>
+          <div class="candidate">
+            <img src="/madonna.jpg" alt="Candidate">
+            <div class="companyContent">
+              <p class="companyName">Madonna Adel</p>
+              <p class="companyCareer">Frontend Developer</p>
+            </div>
+          </div>
+          <button class="show-more-btn">Show More</button>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="company-overview">
+          <h5 class="titleOverview">Overview</h5>
+          <p>Privately held mergers and acquisitions firm focused on media and technology assets...</p>
+        </div>
+        <div *ngIf="selectedCompany">
+          <div class="vacancy">
+            <p class="vacancyTitle"> vacancies at {{ selectedCompany.companyName }}</p>
+            <div class="job-card" *ngFor="let job of jobs ">
+              <a href="" class="text-decoration-none" >
+                 <div class="imgTitle">
+                <h6>{{ job.JobTitle }}</h6>
+
+              </div>
+              <span class="time"><i class="fa-regular fa-clock" style="color: #989DA6"></i> {{ job.timeStamp| dateTime
+                }}</span>
+              <div class="requirments">
+                <span class="require">{{ job.JobType }}</span>
+              </div>
+              <p class="text-truncate">{{ job.description }}</p> 
+              </a>
+            
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.background{
+  background-color:var(--background);
+}
+.row{
+  padding-left:0 !important;
+}
