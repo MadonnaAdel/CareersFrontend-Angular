@@ -68,7 +68,7 @@ npm test
 
 ## 📬 Contact
 
-For support, reach out via [your email or GitHub link].
+For support, reach out via [Madonna Adel](www.linkedin.com/in/madonna-adel-) .
 
 ---
 
