@@ -1,4 +1,3 @@
-import {User} from './User'
 export interface Jobs {
     _id: string;
     companyName: string;
