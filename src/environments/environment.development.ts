@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  baseUrl: "http://careers-api-six.vercel.app/",
+  baseUrl: "https://careers-api-six.vercel.app",
 };
