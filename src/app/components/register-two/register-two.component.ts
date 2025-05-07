@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CompanyBackService } from '../../services/company-back.service';
 import { RegistrationDataServiceService } from '../../services/registration-data-service.service';
 import { CommonModule } from '@angular/common';
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './register-two.component.html',
   styleUrls: ['./register-two.component.css'],
   standalone: true,
-  imports:[ReactiveFormsModule,CommonModule]
+  imports:[ReactiveFormsModule,CommonModule,RouterModule]
 })
 export class RegisterTwoComponent implements OnInit {
   registerForm: FormGroup;

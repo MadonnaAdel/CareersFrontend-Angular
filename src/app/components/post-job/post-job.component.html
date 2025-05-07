@@ -82,7 +82,6 @@
             <option value="Part-Time">Part-Time</option>
             <option value="Internship">Internship</option>
             <option value="Contract">Contract</option>
-            <option value="Freelance">Freelance</option>
           </select>
 
           <div formGroupName="salary">
@@ -225,7 +224,7 @@
           <select id="jobLevel" formControlName="jobLevel">
             <option value="EntryLevel">EntryLevel</option>
             <option value="Senior">Senior</option>
-            <option value="">Expert</option>
+            <option value="Expert">Expert</option>
             <option value="MidLevel">MidLevel</option>
           </select>
           @if(jobForm.get('jobLevel')?.touched){

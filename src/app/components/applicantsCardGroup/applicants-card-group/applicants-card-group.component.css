@@ -40,28 +40,22 @@
 }
 
 
-.skills{
-    
-    display: flex;
-    align-items: center;
-    text-align: center;
-    align-content: center;
-    margin-inline: auto;
-    justify-content:center;
-    color: var(--Paragraph02);
-    font-size: 12px;
-    flex-wrap: wrap;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+  color: var(--Paragraph02);
+  font-size: 12px;
 }
 
-.skill{
+.skill {
   background-color: #f6f7ff;
-  text-align: center;
   border-radius: 0.5rem;
-  padding: 5px 7px; 
+  padding: 5px 7px;
   margin: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .skillText {

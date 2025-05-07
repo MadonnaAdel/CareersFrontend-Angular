@@ -32,6 +32,7 @@ export class CompanyProfileComponent implements OnInit {
     if (companyInfo) {
       const companyData = JSON.parse(companyInfo);
       const companyId = companyData.id;
+      
 
       try {
         const response = await this.companyService.getCompanyById(companyId).toPromise();

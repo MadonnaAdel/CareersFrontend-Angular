@@ -40,7 +40,7 @@ export const routes: Routes = [
       { path: "applications/:JobId/:UserId", component: ApplicantsComponent },
        { path: "candidates", component: CandidatesComponent },
     ],
-  }, {path: "myProfile", component: CompanyProfileComponent},
+  }, {path: "profile/:id", component: CompanyProfileComponent},
   
  
   { path: "**", component: NotfoundComponent }

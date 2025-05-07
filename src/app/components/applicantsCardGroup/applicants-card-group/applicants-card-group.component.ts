@@ -87,7 +87,7 @@ export class ApplicantsCardGroupComponent implements OnInit {
 
   navigateToUserProfile(UserId: string) {
 
-    window.location.href = `https://react-app-nine-beryl.vercel.app/profile/${UserId}`;
+    window.location.href = `http://localhost:5173/profile/${UserId}`;
   }
 
 

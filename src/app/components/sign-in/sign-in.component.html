@@ -1,48 +1,91 @@
-
-
 <section class="register">
-  <div class="container loginContain ">
-    <div class="row registerForm overflow-hidden">
+  <div class="container loginContain">
+    <div class="row registerForm overflow-hidden align-items-center justify-content-center">
       <div class="sectionRigth col-5 py-5">
         <div class="rigth-title">
-          <h2>Find the one that<br/> suits your Company</h2>
+          <h2>
+            Find the one that<br />
+            suits your Company
+          </h2>
         </div>
-        <div class="rigth-img ">
-          <img src="/Usability testing-pana 1.png">
+        <div class="rigth-img">
+          <img src="/Usability testing-pana 1.png" />
         </div>
       </div>
       <div class="sectionLeft col-7 p-4">
         <div class="leftTitle text-center mb-4">
           <h2>Login</h2>
           <p>
-            Search all the open positions on the web. Get your own<br/> personalized salary estimate. Read reviews on over 600,000 <br/> companies worldwide.
+            Search all the open positions on the web. Get your own<br />
+            personalized salary estimate. Read reviews on over 600,000 <br />
+            companies worldwide.
           </p>
         </div>
-        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
-     
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
           <div class="form-group position-relative input-component mt-3">
-            <label for="email" class="position-absolute bg-white label">Email Address</label>
-            <input type="email" id="email" class="form-control" formControlName="companyEmail">
-            <span *ngIf="registerForm.get('companyEmail')?.invalid && registerForm.get('companyEmail')?.touched" class="text-danger">
+            <label for="email" class="position-absolute bg-white label"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              formControlName="companyEmail"
+            />
+            <span
+              *ngIf="
+                registerForm.get('companyEmail')?.invalid &&
+                registerForm.get('companyEmail')?.touched
+              "
+              class="text-danger"
+            >
               Enter a valid email address.
             </span>
           </div>
 
-       
           <div class="form-group position-relative input-component mt-3">
             <label for="password" class="bg-white label">Password</label>
-            <input type="password" id="password" class="form-control" formControlName="companyPassword">
-            <span *ngIf="registerForm.get('companyPassword')?.invalid && registerForm.get('companyPassword')?.touched" class="text-danger">
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              formControlName="companyPassword"
+            />
+            <span
+              *ngIf="
+                registerForm.get('companyPassword')?.invalid &&
+                registerForm.get('companyPassword')?.touched
+              "
+              class="text-danger"
+            >
               Password must be at least 6 characters.
             </span>
           </div>
-     
-          <button type="submit" class="btn btn-success w-100 m-auto mb-3 mt-3 d-flex align-items-center justify-content-center">login</button>
-        </form>
-        <p>Already have an account? <a (click)="navigateToSignIn()" class="text-success text-decoration-none"><span>Forget Password</span></a></p>
 
-      
-      
+          <button
+            type="submit"
+            class="btn btn-success w-100 m-auto mb-3 mt-3 d-flex align-items-center justify-content-center"
+          >
+            login
+          </button>
+        </form>
+        <div class="d-flex justify-content-between align-content-center">
+          <p class="text-secondary">Don't have an account?
+            <a
+            [routerLink]="['/Register']"
+            class="text-success text-decoration-none"
+          >
+            Sign Up
+          </a> 
+          </p>
+         
+          <a
+            (click)="navigateToSignIn()"
+            class="text-success text-decoration-none "
+          >
+            Forget Password</a
+          >
+        </div>
       </div>
     </div>
   </div>

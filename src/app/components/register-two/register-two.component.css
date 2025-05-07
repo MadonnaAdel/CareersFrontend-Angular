@@ -28,6 +28,7 @@
     align-items: stretch;
     align-content: center;
     background: #F6F7FF;
+    height: 100%;
   }
 
   .register .loginContain .registerForm .sectionRigth h2 {
